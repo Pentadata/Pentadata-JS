@@ -27,7 +27,7 @@ const getToken = (async (token, refreshToken) => {
     
     //Send request using refresh token to get new token
     let response = await fetch(`https://api.pentadatainc.com/subscribers/refresh`, {
-        method: 'POST',
+        method: 'GET',
         headers: new Headers({
             'Authorization': `Bearer ${refreshToken}`
         })
